@@ -12,4 +12,11 @@ class ZipcodeControllerTest < ActionController::TestCase
       assert assigns(:low_temperature).present?
     end
   end
+
+  def test_show_weather_by_unknown_zipcode
+    VCR.use_cassette('google_with_invalid_zipcode') do
+      get :show, params: { id: 9999999 }
+      assert_response :not_found
+    end
+  end
 end

@@ -9,7 +9,7 @@ class ZipcodeController < ApplicationController
       @high_temperature = temperatures[:high]
       @low_temperature = temperatures[:low]
     else
-      render template: 'zipcode/not_found'
+      render template: 'zipcode/not_found', status: :not_found
     end
   end
 end
