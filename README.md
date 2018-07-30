@@ -1,24 +1,7 @@
-# README
+# How to run
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone repository
+2. Install `bundler` if you haven't: `sudo gem install bundler`
+3. Run `bundle install` inside the project
+4. Run `rails server`
+5. Search for a zipcode: `http://localhost:3000/zipcode/10018`
